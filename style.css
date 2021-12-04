@@ -44,7 +44,7 @@ body {
     padding: 1.5rem 8rem;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     border-bottom: 3px solid #3693ff;
 }
 
@@ -78,10 +78,25 @@ body {
 
 /* Showcase area */
 
+
+#showcase .about-image img {
+    display: block;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+
+
+
+
+
+
+}
+
 #showcase {
     background-image: url(images/foto_JensErven_6.jpg) no-repeat center center/cover;
-    height: 85vh;
-
+    position: relative;
+    float: left;
+    clear: both;
 
 }
 
@@ -96,10 +111,10 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.2);
     color: white;
     border-bottom: 3px solid #3693ff;
 }
+
 
 .showcase-content h1 {
     font-size: 4rem;
@@ -134,7 +149,9 @@ body {
 #about {
     padding: 5rem 0;
     border-bottom: 3px solid #3693ff;
-
+    position: relative;
+    float: left;
+    clear: both;
 }
 
 #about h2,
@@ -164,6 +181,7 @@ body {
 #about .about-text,
 #about .about-image {
     flex: 1;
+
 }
 
 #about .about-text {
@@ -178,7 +196,7 @@ body {
     margin-left: 100px;
     margin-right: 100px;
     width: 50%;
-    border-radius: 40%;
+    border-radius: 50%;
     margin-top: 0;
     border: 5px solid #3693ff;
 }
@@ -301,8 +319,6 @@ body {
     font-size: 2rem;
     align-content: center;
     margin-bottom: 0.5rem;
-
-
 }
 
 
@@ -402,6 +418,7 @@ body {
 
 /* The circles on the timeline */
 .container::after {
+    flex: 1;
     content: '';
     position: absolute;
     width: 25px;
@@ -554,10 +571,104 @@ body {
     .left::after,
     .right::after {
         left: 15px;
+        ;
     }
 
     /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
     }
+}
+
+/* section:contact-me*/
+
+#contact {
+    padding: 5rem 0;
+    border-bottom: 3px solid #3693ff;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 8rem;
+
+}
+
+#contact h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3rem 0;
+    margin-top: 5rem;
+}
+
+#contact .form-box {
+    background: #f4f4f4;
+    padding: 3rem;
+    box-shadow: 2px 2px 5px #d1d1d1;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#contact .form-group {
+    margin-bottom: 2rem;
+}
+
+#contact .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.1rem;
+
+}
+
+
+#contact .form-group input,
+#contact .form-group textarea {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border: 0.5px solid #333;
+    border-radius: 5px;
+}
+
+#contact .form-group textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact .contact-btn {
+    width: 80%;
+    margin-left: 10%;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background: #3693ff;
+    color: #fff;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact .contact-btn:hover {
+    background: #0378ff;
+}
+
+#contact .form-container {
+    position: relative;
+}
+
+#contact .mail-icon {
+    font-size: 4rem;
+    background: #3693ff;
+    color: #fff;
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    left: 46%;
 }
